@@ -13,10 +13,8 @@ const db = knex({
   // Enter your own database information here based on what you created
   client: 'pg',
   connection: {
-    host : 'postgresql-adjacent-12420',
-    user : 'hrguan',
-    password : '',
-    database : 'template1'
+    host : process.env.DATABASE_URL,
+    ssl: true,
   }
 });
 
